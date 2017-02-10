@@ -1,0 +1,13 @@
+<h1>All post</h1>
+<% @posts.each do |post| %>
+  <div class="form-group">
+    <div class="title">
+      <h3><%= post.title %></h3>
+      <h6><%= l post.created_at, format: :vietnamese %></h6>
+    </div>
+    <div class="body">
+      <p><%= raw(post.body).truncate(358) %></p>
+      <span><%= link_to "See more", post_path(post) %></span>
+    </div>
+  </div>
+<% end %>

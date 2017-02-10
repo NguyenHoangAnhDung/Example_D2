@@ -1,0 +1,5 @@
+<div class="col-sm-11 col-xs-12 blog-content">
+  <h2 class="text-center"><%= @post.title %></h2>
+  <h5 class="text-center"><%= l @post.created_at, format: :vietnamese  %></h5>
+  <div><%= raw @post.body %></div>
+</div>

@@ -20,4 +20,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  time:
+    formats:
+      vietnamese: "%d/%m/%Y"
+  error:
+    post: "Something wrong when create post. Please try again!"
+  success:
+    post: "Create post sucessfully"
   hello: "Hello world"
+  posts:
+    new:
+      create_post: "Create post"
+      title_placeholder: "Your title"
