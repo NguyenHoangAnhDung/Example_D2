@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { MaterializeModule } from 'angular2-materialize';
@@ -8,6 +9,8 @@ import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import { DashBoardComponent } from './dashboard/dashboard.component';
 import { ItemService } from './item.service';
+
+import { Angular2TokenService } from 'angular2-token';
 
 
 @NgModule({
@@ -19,9 +22,10 @@ import { ItemService } from './item.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MaterializeModule
+    MaterializeModule,
+    HttpModule
   ],
-  providers: [ ItemService ],
+  providers: [ ItemService, Angular2TokenService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
